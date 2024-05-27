@@ -1,8 +1,7 @@
 import { EventEmitter } from "events";
-import { IEventBusPort } from "../../domain/ports/event.port";
-import { EventPayload } from "../../domain/models/event.model";
+import { EventBus, EventPayload } from "../../../domain/events";
 
-export class EventEmitterAdapter implements IEventBusPort {
+export class EventBusEmitterAdapter implements EventBus {
   private eventEmitter: EventEmitter;
 
   constructor() {

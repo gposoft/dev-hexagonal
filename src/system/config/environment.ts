@@ -5,7 +5,7 @@ config({ path: `.env.${process.env.NODE_ENV}` });
 
 export const envConfig = {
   db: {
-    engine: "PG",
+    engine: process.env.DB_ENGINE,
     postgres: {
       DB_USER: process.env.DB_POSTGRES_USER || "developer",
       DB_PASSWORD: process.env.DB_POSTGRES_PASSWORD || "developer",
@@ -15,7 +15,7 @@ export const envConfig = {
     },
   },
   security: {
-    jwt_pass: process.env.SECURITY_JWT_KEY || "" ,
+    jwt_pass: process.env.SECURITY_JWT_KEY || "",
     APIKEY: process.env.API_KEY || "",
   },
   email: {

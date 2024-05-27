@@ -2,7 +2,7 @@
 .env
 /dist
 /node_modules
-/modules
+/src/modules
 
 # Logs
 logs
