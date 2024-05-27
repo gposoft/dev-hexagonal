@@ -4,6 +4,9 @@
 /node_modules
 /src/modules
 
+# bats
+.bat
+
 # Logs
 logs
 *.log
